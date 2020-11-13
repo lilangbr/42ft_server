@@ -1,10 +1,6 @@
 #!/bin/bash
 
-#service nginx start
-/etc/init.d/nginx start
-
 #Notice to navigators
-
 echo "-------------------------------------------------------------------------------
 
 Welcome to 
@@ -19,10 +15,8 @@ Welcome to
  A server running inside a Docker Container!
 
 -------------------------------------------------------------------------------"
-
-#Black Hole: Infinite Loop to maintain the container operant
-tail -f /dev/null
-
+#/etc/init.d/nginx start (eh antigo n usa mais, embora funcione!)
+service nginx start 
 # Terminal mode
 /bin/bash
 
