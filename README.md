@@ -1,6 +1,6 @@
 # 42ft_server
 
-<h2>1th</h2>
+<h2>1th - NGINX</h2>
 
 Install **NGINX server**, start it and keep the container running.
 
@@ -15,5 +15,6 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
 * <b>Stop:</b>    
   * $ sudo docker container stop v1.0
   
-<h2>2th</h2>
-Configure nginx **HTTPS** server with self-signed **SSL certificate**
+<h2>2th - SSL</h2> 
+
+Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
