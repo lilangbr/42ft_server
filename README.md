@@ -12,3 +12,5 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
   * $ sudo docker image build -t lilangbr/ft_server:1.0 .
 * <b>Up:</b>    
   * $ sudo docker container run -p 80:80 --name v1.0 lilangbr/ft_server:1.0
+* <b>Stop:</b>    
+  * $ sudo docker container stop v1.0
