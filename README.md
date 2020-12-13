@@ -2,7 +2,7 @@
 
 <h2>1th</h2>
 
-Install NGINX server, start it and keep the container running.
+Install **NGINX server**, start it and keep the container running.
 
 ![1th](readme_images/1.png)
 
@@ -14,3 +14,6 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
   * $ sudo docker container run -p 80:80 --name v1.0 lilangbr/ft_server:1.0
 * <b>Stop:</b>    
   * $ sudo docker container stop v1.0
+  
+<h2>2th</h2>
+Configure nginx **HTTPS** server with self-signed **SSL certificate**
