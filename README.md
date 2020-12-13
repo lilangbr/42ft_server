@@ -11,9 +11,14 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
 * <b>Build:</b> 
   * $ sudo docker image build -t lilangbr/ft_server:1.0 .
 * <b>Up:</b>    
-  * $ sudo docker container run -p 80:80 --name v1.0 lilangbr/ft_server:1.0
+  * $ sudo docker container run -it -p 80:80 --name v1.0 lilangbr/ft_server:1.0
+
+![1_1th](readme_images/1_1.png) 
+  
 * <b>Stop:</b>    
   * $ sudo docker container stop v1.0
+* <b>Start again:</b>    
+  * $ sudo docker container start v1.0
   
 <h2>Step 2 - SSL</h2> 
 
