@@ -23,3 +23,6 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
 <h2>Step 2 - SSL</h2> 
 
 Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
+Two <b>new files</b>: config.sh and nginx.conf. The first copies the second, which is an additional configuration file, to the folder specified in the container, makes the necessary links, as well as configuring the SSL certificate with OpenSSL installed by Dockerfile. In the second, additional configuration file, the connection to port 80 is redirected to a secure HTTPS connection - port 443, which is added, setting the certificate as well as the index files.
+
+![2th](readme_images/2.png)
