@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## NGINX config
-# Send nginx.conf to sites-available 
+# Send nginx.conf to sites-available folder
 cp /tmp/to_nginx_sites_available/nginx.conf /etc/nginx/sites-available/nginx.conf
 
 # Link nginx.conf with sites-enabled
@@ -10,6 +10,8 @@ ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/
 # Unink default from sites-enabled
 unlink /etc/nginx/sites-enabled/default
 
+# Send certificates to snippets folder
+cp /tmp/to_nginx_snippets/self-signed.conf /etc/nginx/snippets/self-signed.conf
 #Give permissions and change ownership
 #chown -R www-data:www-data /var/www/*
 #chmod -R 755 /var/www/*

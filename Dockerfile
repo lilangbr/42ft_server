@@ -7,6 +7,8 @@ COPY srcs /tmp/
 
 RUN apt-get update && \
     apt-get -y upgrade && \
+    apt-get install -y apt-utils && \
+    apt-get install -y curl && \
     apt-get install -y nginx && \
     apt-get install -y openssl
 RUN bash /tmp/config.sh
