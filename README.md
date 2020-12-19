@@ -35,3 +35,37 @@ Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
 * <b>Up:</b>    
   * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.1 lilangbr/ft_server:1.1
 * <b>To stop and start again, see Step 1.</b>
+<h2>Step 3 - MySQL</h2>
+
+Install **MariaDB Server**, start it and test an exampledb and a exampleuser.
+
+* <b>Modified files:</b>
+
+![3_0th](readme_images/3_0.png)
+
+* <b>Schema:</b>
+
+![3th](readme_images/3.png)
+
+* <b>Start</b>
+
+![3_1th](readme_images/3_1.png)
+
+* <b>Test</b>
+
+![3_2th](readme_images/3_2.png)
+
+* <b>Exit</b>
+
+![3_4th](readme_images/3_4png)
+
+* <b> ***** All right! ***** </b>
+
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server:1.2 .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.2 lilangbr/ft_server:1.2
+* <b>Stop:</b>    
+  * $ sudo docker container stop v1.2
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai v1.2 
