@@ -16,6 +16,14 @@ cp /tmp/to_nginx_snippets/self-signed.conf /etc/nginx/snippets/self-signed.conf
 #chown -R www-data:www-data /var/www/*
 #chmod -R 755 /var/www/*
 
+#Create a database and a user test
+service mysql start
+echo "CREATE DATABASE exampledb;" | mysql -u root
+echo "GRANT ALL ON exampledb.* TO 'exampleuser'@'localhost' IDENTIFIED BY 'exampleuser' WITH GRANT OPTION;" | mysql -u root
+echo "FLUSH PRIVILEGES;" | mysql -u root
+
+
+
 
 #SSL config
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
