@@ -17,6 +17,7 @@ Welcome to
 -------------------------------------------------------------------------------"
 #/etc/init.d/nginx start (eh antigo n usa mais, embora funcione!)
 service nginx start 
+service php7.3-fpm start
 # Terminal mode
 /bin/bash
 

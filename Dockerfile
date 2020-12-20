@@ -11,7 +11,10 @@ RUN apt-get update && \
     apt-get install -y curl && \
     apt-get install -y nginx && \
     apt-get install -y openssl && \
-    apt-get install -y mariadb-server
+    apt-get install -y mariadb-server && \
+    apt-get install -y php7.3 && \
+    apt-get install -y php-fpm php-mysql
+
 RUN bash /tmp/config.sh
 
 EXPOSE 80 443
