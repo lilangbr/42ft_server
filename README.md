@@ -1,20 +1,26 @@
 # 42ft_server
 
 This is a System Administration subject, to discover Docker and set up my first web server! This server runs multiples services: 
-* Wordpress, 
-* phpMyAdmin, and a 
-* SQL database
+* **Wordpress**, 
+* **phpMyAdmin**, and a 
+* **SQL database**
 
 • It was set up a web server with **Nginx**, in only one debian buster docker container. 
+
 • Ther web server is be able to run several services at the same time: WordPress website, phpMyAdmin and MySQL. (It was make sure that the SQL database works with the WordPress and phpMyAdmin.)
+
 • The server is be able to use the SSL protocol.
+
 • Depending on the url, the server redirects to the correct website.
+
 • Ther server is running with an autoindex that is be able to be disabled.
 
-Enjoy this!
+**Enjoy this!**
 
 ![0th](readme_images/0.png)
 
+In order you understand how the server was contructed, below it was the steps of this project: 
+(The intermediate files can be obtained by looking for commits)
 
 <h2>Step 1 - NGINX</h2>
 
@@ -37,7 +43,7 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.0 
   
-<h2>Step 2 - SSL</h2> 
+<h2>Step 2 - SSL</h2>
 
 Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
 * Three <b>new files</b>: config.sh, nginx.conf and self-signed.conf
@@ -108,4 +114,13 @@ Install **PHP** for processing. Need PHP fastCGI process manager to handle PHP r
 
 ![4_3th](readme_images/4_3.png)
 
+* <b> ***** All right! ***** </b>
 
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server:1.3 .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.3 lilangbr/ft_server:1.3
+* <b>Stop:</b>    
+  * $ sudo docker container stop v1.3
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai v1.3 
