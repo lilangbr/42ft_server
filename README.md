@@ -69,3 +69,27 @@ Install **MariaDB Server**, start it and test an exampledb and a exampleuser.
   * $ sudo docker container stop v1.2
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.2 
+ 
+ <h2>Step 4 - PHP</h2>
+
+Install **PHP** for processing. Need PHP fastCGI process manager to handle PHP requests. It's also necessary a module that allows PHP to communicat wiht MySQL.
+
+![4th_0](readme_images/4_0.png)
+
+* <b>Schema:</b>
+
+![4th](readme_images/4.png)
+
+* <b>Test 1: Passed!</b>
+
+![4_1th](readme_images/4_1.png)
+
+* <b>Test 2: Passed!</b>
+
+![4_2th](readme_images/4_2.png)
+
+* <b>Test 3: Passed!</b>
+
+![4_3th](readme_images/4_3.png)
+
+
