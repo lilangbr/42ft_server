@@ -124,3 +124,21 @@ Install **PHP** for processing. Need PHP fastCGI process manager to handle PHP r
   * $ sudo docker container stop v1.3
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.3 
+  
+<h2>Step 4* - More Tests</h2>
+
+Here, let's test the database connection from PHP. In config file, a database with some entries was created and also it was created a test file named todo_list.php to show in browser. As it was expected, the PHP was connected with database! In figure, the black box represent the server side, and the white box (the browser), the client side:
+
+![4_testth](readme_images/4_test.png)
+
+* <b> ***** All right! ***** </b>
+
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server_test:1.3 .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v_test1.3 lilangbr/ft_server_test:1.3
+* <b>Stop:</b>    
+  * $ sudo docker container stop v_test1.3
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai v_test1.3 
+
