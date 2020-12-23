@@ -127,7 +127,7 @@ Install **PHP** for processing. Need PHP fastCGI process manager to handle PHP r
   
 <h2>Step 4* - More Tests</h2>
 
-Here, let's test the database connection from PHP. In config file, a database with some entries was created and also it was created a test file named todo_list.php to show in browser. As it was expected, the PHP was connected with database! In figure, the black box represent the server side, and the white box (the browser), the client side:
+Here, let's test the **Database connection from PHP**. In config file, a database with some entries was created and also it was created a test file named todo_list.php to show in browser. As it was expected, the PHP was connected with database! In figure, the black box represent the server side, and the white box (the browser), the client side:
 
 ![4_testth](readme_images/4_test.png)
 
