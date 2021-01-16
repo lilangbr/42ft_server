@@ -17,6 +17,7 @@ Welcome to
 -------------------------------------------------------------------------------"
 #/etc/init.d/nginx start (eh antigo n usa mais, embora funcione!)
 service nginx start 
+service mysql restart #Jah havia iniciado em STEP3 ./srcs/config
 service php7.3-fpm start
 # Terminal mode
 /bin/bash
