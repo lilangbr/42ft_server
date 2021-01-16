@@ -22,7 +22,7 @@ This is a System Administration subject, to discover Docker and set up my first 
 In order you understand how the server was contructed, below it was the steps of this project: 
 (The intermediate files can be obtained by looking for commits)
 
-<h2>Step 1 - NGINX</h2>
+<h2>Step 1 - NGINX v1.0</h2>
 
 Install **NGINX server**, start it and keep the container running.
 
@@ -43,7 +43,7 @@ _In Unix-type operating systems, the / dev / null, or null device, is a special 
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.0 
   
-<h2>Step 2 - SSL</h2>
+<h2>Step 2 - SSL v1.1</h2>
 
 Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
 * Three <b>new files</b>: config.sh, nginx.conf and self-signed.conf
@@ -57,7 +57,7 @@ Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
 * <b>Up:</b>    
   * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.1 lilangbr/ft_server:1.1
 * <b>To stop and start again, see Step 1.</b>
-<h2>Step 3 - MySQL</h2>
+<h2>Step 3 - MySQL v1.2</h2>
 
 Install **MariaDB Server**, start it and test an exampledb and a exampleuser.
 
@@ -92,7 +92,7 @@ Install **MariaDB Server**, start it and test an exampledb and a exampleuser.
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.2 
  
- <h2>Step 4 - PHP</h2>
+ <h2>Step 4 - PHP v1.3</h2> 
 
 Install **PHP** for processing. Need PHP fastCGI process manager to handle PHP requests. It's also necessary a module that allows PHP to communicat wiht MySQL.
 
@@ -142,3 +142,27 @@ Here, let's test the **Database connection from PHP**. In config file, a databas
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v_test1.3 
 
+<h2>Step 5 - Wordpress v1.4</h2> 
+
+As in the previous steps, just look at the difference between commits. The steps were detailed in the code, with comments. The files are basically downloaded and later configured.
+
+<b> * Start verification * </b>
+
+![5_0th](readme_images/wp0.png)
+
+![5_1th](readme_images/wp1.png)
+
+![5_2th](readme_images/wp2.png)
+
+![5_3th](readme_images/wp3.png)
+
+<b> ***** All right! ***** </b>
+
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server:1.4 .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.4 lilangbr/ft_server:1.4
+* <b>Stop:</b>    
+  * $ sudo docker container stop v1.4
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai v1.4 
