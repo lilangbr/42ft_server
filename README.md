@@ -166,3 +166,21 @@ As in the previous steps, just look at the difference between commits. The steps
   * $ sudo docker container stop v1.4
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.4 
+
+<h2>Step 6 - phpMyAdmin v1.5</h2> 
+
+Same as Step 5.
+
+![6th](readme_images/6.png)
+
+<b> ***** All right! ***** </b>
+
+
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server:1.4 .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.4 lilangbr/ft_server:1.4
+* <b>Stop:</b>    
+  * $ sudo docker container stop v1.4
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai v1.4 
