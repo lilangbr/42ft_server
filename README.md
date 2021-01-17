@@ -177,10 +177,10 @@ Same as Step 5.
 
 
 * <b>Build:</b> 
-  * $ sudo docker image build -t lilangbr/ft_server:1.4 .
+  * $ sudo docker image build -t lilangbr/ft_server:1.5 .
 * <b>Up:</b>    
-  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.4 lilangbr/ft_server:1.4
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.5 lilangbr/ft_server:1.5
 * <b>Stop:</b>    
-  * $ sudo docker container stop v1.4
+  * $ sudo docker container stop v1.5
 * <b>Start again:</b>    
-  * $ sudo docker container start -ai v1.4 
+  * $ sudo docker container start -ai v1.5 
