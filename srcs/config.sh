@@ -2,7 +2,7 @@
 
 ##_____ STEP 1 - NGINX config
 # Send nginx.conf to sites-available folder
-cp /tmp/to_nginx_sites_available/nginx.conf /etc/nginx/sites-available/nginx.conf
+cp /tmp/send_files/etc_nginx/sites-available/nginx.conf /etc/nginx/sites-available/nginx.conf
 
 # Link nginx.conf with sites-enabled
 ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/
@@ -13,7 +13,7 @@ unlink /etc/nginx/sites-enabled/default
 
 ##_____ STEP 2 - SSL
 # Send certificates to snippets folder
-cp /tmp/to_nginx_snippets/self-signed.conf /etc/nginx/snippets/self-signed.conf
+cp /tmp/send_files/etc_nginx/snippets/self-signed.conf /etc/nginx/snippets/self-signed.conf
 
 
 #SSL config
@@ -37,15 +37,15 @@ mkdir /var/www/localhost
 ##_____STEP 4 - PHP
 #Give permissions and change ownership
 # This is the user and group that Nginx runs as
-chown -R www-data:www-data /var/www/*
+chown -R www-data:www-data /var/www/localhost/*
 #chmod -R 755 /var/www/*
 
 # Send info.php to test
-cp /tmp/to_varwwwlocalhost/info.php /var/www/localhost/info.php
+cp /tmp/send_files/rootserver/php/info.php /var/www/localhost/php/info.php
 
 ##_____STEP 4_1 - Testing Database Connection from PHP
 # Send todo_list.php, a file to test
-cp /tmp/to_varwwwlocalhost/todo_list.php /var/www/localhost/todo_list.php
+cp /tmp/send_files/rootserver/php/todo_list.php /var/www/localhost/php/todo_list.php
 echo "CREATE TABLE exampledb.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));" | mysql -u root
 echo "INSERT INTO exampledb.todo_list (content) VALUES ('My first important item');" | mysql -u root
 echo "INSERT INTO exampledb.todo_list (content) VALUES ('My second important item');" | mysql -u root
@@ -61,6 +61,15 @@ echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #Configure WordPress(previously downloaded in /tmp folder)
 #cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php - Tiro p n usar script!
-cp -a /tmp/wordpress/. /var/www/localhost/wordpress
-cp /tmp/to_varwwwlocalhostwp/wp-config.php /var/www/localhost/wordpress #Previamente editado
+tar -zxvf /tmp/latest.tar.gz -C /var/www/localhost #Ja copia como wordpress
+rm -rf /tmp/latest.tar.gz
+#cp -a /tmp/wordpress/. /var/www/localhost/wordpress
+cp /tmp/send_files/rootserver/wordpress/wp-config.php /var/www/localhost/wordpress #Previamente editado
 
+
+##____STEP 6 - phpMyAdmin
+tar -zxvf /tmp/phpMyAdmin-5.0.2-english.tar.gz -C /var/www/localhost #Copia com esse nome gde
+mv /var/www/localhost/phpMyAdmin-5.0.2-english /var/www/localhost/phpmyadmin
+rm -rf /tmp/phpMyAdmin-5.0.2-english.tar.gz
+#mv /tmp/phpMyAdmin-5.0.2-english/ /var/www/localhost/phpmyadmin
+cp /tmp/send_files/rootserver/phpmyadmin/config.inc.php /var/www/localhost/phpmyadmin/config.inc.php
