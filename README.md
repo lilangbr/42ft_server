@@ -1,6 +1,8 @@
 # 42ft_server
 
-This is a System Administration subject, to discover Docker and set up my first web server! This server runs multiples services: 
+This is a System Administration subject, to discover Docker and set up my first web server! 
+
+<h3>This server runs multiples services: </h3>
 * **Wordpress**, 
 * **phpMyAdmin**, and a 
 * **SQL database**
