@@ -27,7 +27,7 @@ chmod 666 /etc/ssl/certs/nginx-selfsigned.key /etc/ssl/certs/nginx-selfsigned.cr
 # Create a database and a user test
 service mysql start
 echo "CREATE DATABASE exampledb;" | mysql -u root
-echo "GRANT ALL ON exampledb.* TO 'exampleuser'@'localhost' IDENTIFIED BY 'exampleuser' WITH GRANT OPTION;" | mysql -u root
+echo "GRANT ALL ON exampledb.* TO 'exampleuser'@'localhost' IDENTIFIED BY 'exampleuser';" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
 # ***** All Right! *****
 
@@ -56,7 +56,7 @@ echo "SELECT * FROM exampledb.todo_list;" | mysql -u root > /teste4_1.txt
 #First, we can create a separate database that WordPress can control.
 #Create a db for wp
 echo "CREATE DATABASE wp DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
-echo "GRANT ALL ON wp.* TO 'wp_user'@'localhost' IDENTIFIED BY 'wp_user';" | mysql -u root
+echo "GRANT ALL ON wp.* TO 'wp_user'@'localhost' IDENTIFIED BY 'wp_user' WITH GRANT OPTION;" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #Configure WordPress(previously downloaded in /tmp folder)
