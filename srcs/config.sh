@@ -56,7 +56,7 @@ echo "SELECT * FROM exampledb.todo_list;" | mysql -u root > /db_connection_test.
 #First, we can create a separate database that WordPress can control.
 #Create a db for wp
 echo "CREATE DATABASE wp DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
-echo "GRANT ALL ON wp.* TO 'wp_user'@'localhost' IDENTIFIED BY 'wp_user' WITH GRANT OPTION;" | mysql -u root
+echo "GRANT ALL ON wp.* TO 'wp_admin'@'localhost' IDENTIFIED BY 'wp_admin' WITH GRANT OPTION;" | mysql -u root
 echo "FLUSH PRIVILEGES;" | mysql -u root
 
 #Configure WordPress(previously downloaded in /tmp folder)
