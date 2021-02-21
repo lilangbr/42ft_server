@@ -50,7 +50,7 @@ echo "CREATE TABLE exampledb.todo_list (item_id INT AUTO_INCREMENT,content VARCH
 echo "INSERT INTO exampledb.todo_list (content) VALUES ('My first important item');" | mysql -u root
 echo "INSERT INTO exampledb.todo_list (content) VALUES ('My second important item');" | mysql -u root
 echo "INSERT INTO exampledb.todo_list (content) VALUES ('My third important item');" | mysql -u root
-echo "SELECT * FROM exampledb.todo_list;" | mysql -u root > /teste4_1.txt
+echo "SELECT * FROM exampledb.todo_list;" | mysql -u root > /db_connection_test.txt
 
 ##____STEP 5 - WordPress
 #First, we can create a separate database that WordPress can control.
@@ -73,3 +73,6 @@ mv /var/www/localhost/phpMyAdmin-5.0.2-english /var/www/localhost/phpmyadmin
 rm -rf /tmp/phpMyAdmin-5.0.2-english.tar.gz
 #mv /tmp/phpMyAdmin-5.0.2-english/ /var/www/localhost/phpmyadmin
 cp /tmp/send_files/rootserver/phpmyadmin/config.inc.php /var/www/localhost/phpmyadmin/config.inc.php
+
+##____STEP 7 - Autoindex
+ln -s /tmp/autoindex.sh /autoindex_ctrl
