@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'wp' );
 
 /** MySQL database username */
-define( 'DB_USER', 'wp_user' );
+define( 'DB_USER', 'wp_admin' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'wp_user' );
+define( 'DB_PASSWORD', 'wp_admin' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
