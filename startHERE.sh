@@ -5,9 +5,11 @@ up="sudo docker container run -it -p 80:80 -p 443:443 --name ebresser_cnt ebress
 
 netstat -anp | grep 0.0.0.0:80 
 if [ $? -eq 0 ]; then
+	echo "******************************************************************************"
 	echo "WARNING:"
 	echo "There is already a service at port 80. Disable to be able to up the container!";
 	echo "TIP: Verify NGINX. To stop this, type 'sudo service nginx stop' on terminal"
+	echo "******************************************************************************"
 else
 	$build && $up;
 fi
