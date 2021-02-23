@@ -196,3 +196,17 @@ autoindex off -> autoindex on
 Warnings are show in the command line to guide admin. A soft link was generate in the root container to facilities the managing.
 
 It was also created scripts that run the build image and up the container associated. As well as a script that clean the local machine(removes container and its image).
+
+<b> ***** Thats all folks! ***** </b>
+
+
+* <b>Build:</b> 
+  * $ sudo docker image build -t lilangbr/ft_server:last .
+* <b>Up:</b>    
+  * $ sudo docker container run -it -p 80:80 -p 443:443 --name last lilangbr/ft_server:last
+* <b>Stop:</b>    
+  * $ sudo docker container stop last
+* <b>Start again:</b>    
+  * $ sudo docker container start -ai last 
+
+![7th](readme_images/panda.jpg)
