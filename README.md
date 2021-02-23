@@ -187,3 +187,12 @@ Same as Step 5.
   * $ sudo docker container stop v1.5
 * <b>Start again:</b>    
   * $ sudo docker container start -ai v1.5 
+
+<h2>Step 7 - Autoindex control</h2> 
+
+Basically, it was created a sheel script that identifies the line in the server config file that causes a state switch and change it by its opposite. 
+Autoindex on -> autoindex off
+autoindex off -> autoindex on
+Warnings are show in the command line to guide admin. A soft link was generate in the root container to facilities the managing.
+
+It was also created scripts that run the build image and up the container associated. As well as a script that clean the local machine(removes container and its image).
