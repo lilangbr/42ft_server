@@ -18,9 +18,28 @@ This is a System Administration subject, to discover Docker and set up my first 
 
 • Ther server is running with an autoindex that is be able to be disabled.
 
+:construction: Build:
+```
+$ sudo docker image build -t lilangbr/ft_server:last .
+```
+:rocket:  Up:
+```
+$ sudo docker container run -it -p 80:80 -p 443:443 --name last lilangbr/ft_server:last
+```
+🛑 Stop:
+```
+$ sudo docker container stop last
+```
+:recycle: Start again:
+```
+$ sudo docker container start -ai last
+```
+
 **Enjoy this!**
 
 ![0th](readme_images/0.png)
+
+:construction: Steps of contruction
 
 In order you understand how the server was contructed, below it was the steps of this project: 
 (The intermediate files can be obtained by looking for commits)
@@ -55,7 +74,8 @@ Configure nginx <b>HTTPS</b> server with self-signed <b>SSL certificate</b>.
     
 ![2th](readme_images/2.png)
 
-* <b>Build:</b> 
+**Build:**
+
   * $ sudo docker image build -t lilangbr/ft_server:1.1 .
 * <b>Up:</b>    
   * $ sudo docker container run -it -p 80:80 -p 443:443 --name v1.1 lilangbr/ft_server:1.1
