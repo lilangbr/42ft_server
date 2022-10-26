@@ -1,6 +1,6 @@
 # 42ft_server
 
-This is a System Administration subject, to discover Docker and set up my first web server! 
+It is a systems administration project, whose objective is to create a containerized and ready-to-deploy web server, using Docker. Applications such as Nginx, PHPMyAdmin and Wordpress are run inside the container, and the use of Docker Compose is prohibited. In addition to learning about how a server works and about the concept of containerization, the project also encourages the use of scripts to facilitate and automate deployment.
 
 <h3>This server runs multiples services: </h3>
 
